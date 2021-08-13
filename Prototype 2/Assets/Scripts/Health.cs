@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollision : MonoBehaviour
+public class Health : MonoBehaviour
 {
+    public int maxHealth;
+    public int currentHealth;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -18,24 +20,17 @@ public class DetectCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Projectile")
         {
             return;
         }
 
-        if (this.tag == "Projectile")
+        currentHealth--;
+        Debug.Log($"Health: {currentHealth}");
+
+        if(currentHealth < 1)
         {
-            Destroy(gameObject);
-            return;
+            Debug.Log("Game Over!");
         }
-
-        /*if(other.tag == "Player")
-        {
-            return;
-        }
-
-
-        //Destroy(other.gameObject);
-        //Destroy(gameObject);*/
     }
 }

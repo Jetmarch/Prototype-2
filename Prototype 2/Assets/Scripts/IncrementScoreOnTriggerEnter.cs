@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollision : MonoBehaviour
+public class IncrementScoreOnTriggerEnter : MonoBehaviour
 {
+    public GameObject scoreManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreManager = GameObject.Find("ScoreManager");
     }
 
     // Update is called once per frame
@@ -18,24 +19,13 @@ public class DetectCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if(other.tag == "Player")
         {
             return;
         }
-
-        if (this.tag == "Projectile")
+        if (scoreManager)
         {
-            Destroy(gameObject);
-            return;
+            scoreManager.GetComponent<Score>().IncrementScore();
         }
-
-        /*if(other.tag == "Player")
-        {
-            return;
-        }
-
-
-        //Destroy(other.gameObject);
-        //Destroy(gameObject);*/
     }
 }
