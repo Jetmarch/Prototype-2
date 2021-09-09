@@ -1382,9 +1382,10 @@ GameObject:
   - component: {fileID: 8705162587234976359}
   - component: {fileID: 8705162587244691921}
   - component: {fileID: 8705162586600803629}
-  - component: {fileID: 638082372571834392}
   - component: {fileID: 7825733312807695892}
   - component: {fileID: 8767769545715230625}
+  - component: {fileID: -4100723795382431203}
+  - component: {fileID: -4085040380644316976}
   m_Layer: 0
   m_Name: Animal_Fox_02
   m_TagString: Dog
@@ -1451,18 +1452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &638082372571834392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8705162587235309925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629bc3fdfe590e14c8b425a1ddeb2afd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &7825733312807695892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1491,3 +1480,27 @@ MonoBehaviour:
   maxFill: 1
   currentFill: 0
   hungerSlider: {fileID: 7567967258224586576}
+--- !u!114 &-4100723795382431203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705162587235309925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c52ee72091692143869a36cdefe1fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4085040380644316976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705162587235309925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e62e9a8a22fac478a927ce940e28f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

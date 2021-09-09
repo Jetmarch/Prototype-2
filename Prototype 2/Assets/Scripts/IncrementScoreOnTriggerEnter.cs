@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IncrementScoreOnTriggerEnter : MonoBehaviour
 {
-    public GameObject scoreManager;
+    private GameObject scoreManager;
     // Start is called before the first frame update
     void Start()
     {
